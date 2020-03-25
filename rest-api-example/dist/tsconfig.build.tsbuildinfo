@@ -1117,12 +1117,20 @@
         "version": "552cf85f83775610fccaf2a1c7f294925217059bdb55fa787f2b9d5aca009048",
         "signature": "c4868b493108329aa6d36437759a80b958d55b03e4beecb63980642192ad4aef"
       },
+      "../src/items/interfaces/item.interface.ts": {
+        "version": "295b330b7389ba1c910ea7c9e1d93f23121c7be2e7c85401cd2167353a4e4494",
+        "signature": "540f9c47fe827cf88b1a0668b757220a405f49c3a5f3a603e2c9adf7fa8c393e"
+      },
+      "../src/items/items.service.ts": {
+        "version": "5ef75bcc6ca325758893494dd5da2f24c665eaa677fc6b7f789d545f34cd6bf9",
+        "signature": "f2d5d57a984bc8310c1f49523e382416275d346e6c9d4c1d2c9eb66f4a420e0e"
+      },
       "../src/items/items.controller.ts": {
-        "version": "8187b4372a6280f075dcc5290ccafd8b116d61589de84becab42545949edd390",
-        "signature": "43729ac92fc9847ac1b9afc2d39be062da636e6c6b36d8a51546edda68b49f02"
+        "version": "3f48f451f76c163eb74603e63e88573369844780f37addaff668eeede7e7fd02",
+        "signature": "39ca74e09d49262425a54f2c18c7f0ae7c4561818750a5c44d0f04986c58ff60"
       },
       "../src/app.module.ts": {
-        "version": "bb303a833fd8f20b230ef728757df3c8a78e1845c064047548258df72ad845a3",
+        "version": "e55ba9cce98444a733e99ee2792de6f3304ff18d3c7b7f999eca8f8ba9bb3466",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -1273,6 +1281,14 @@
         "version": "e25d9bd8f80b6ffbcc8826ed1b407e747e4fbe346c5bab62cbe5837da4eeb189",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
+      "../src/config/keys.ts": {
+        "version": "0241a302dcc3cbda2de307e48df1e67284bd667e4ea08c47aeba7b30930dad7a",
+        "signature": "49390e493d354beeb1eee08bb95f47b55e3423764ada50ddc39091fd1929fca1"
+      },
+      "../src/items/items.module.ts": {
+        "version": "40ccf46eed24e7551b0c412ab01f563f7894e615263d37256b48152d0ad2288d",
+        "signature": "fc7cc18a8e5feb041bb7ba0e24175c89f34c30177a7266e5848e7c4017fac034"
+      },
       "../node_modules/@types/anymatch/index.d.ts": {
         "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
         "signature": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76"
@@ -1300,6 +1316,10 @@
       "../node_modules/@types/babel__core/index.d.ts": {
         "version": "cb5df634c024fe13ea293f7aa2b27a9d02f9b3aece975c884485c617d7653e25",
         "signature": "cb5df634c024fe13ea293f7aa2b27a9d02f9b3aece975c884485c617d7653e25"
+      },
+      "../node_modules/@types/bson/index.d.ts": {
+        "version": "3994ebfd11faa4018d8e1b879190046588f41f5cd60438e642ca39a705c726be",
+        "signature": "3994ebfd11faa4018d8e1b879190046588f41f5cd60438e642ca39a705c726be"
       },
       "../node_modules/@types/color-name/index.d.ts": {
         "version": "f0cb4b3ab88193e3e51e9e2622e4c375955003f1f81239d72c5b7a95415dad3e",
@@ -1364,6 +1384,14 @@
       "../node_modules/@types/json5/index.d.ts": {
         "version": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538",
         "signature": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538"
+      },
+      "../node_modules/@types/mongodb/index.d.ts": {
+        "version": "ec879a3e2eaa647911ea9cdcd754308b643eb0a726cee0f0f6a9f38ce31359c9",
+        "signature": "ec879a3e2eaa647911ea9cdcd754308b643eb0a726cee0f0f6a9f38ce31359c9"
+      },
+      "../node_modules/@types/mongoose/index.d.ts": {
+        "version": "782f6f7b6c92aed8d7643fbaab929af78a662da4aab7b785818549a7060ed726",
+        "signature": "782f6f7b6c92aed8d7643fbaab929af78a662da4aab7b785818549a7060ed726"
       },
       "../node_modules/@types/source-list-map/index.d.ts": {
         "version": "67fc055eb86a0632e2e072838f889ffe1754083cb13c8c80a06a7d895d877aae",
@@ -3649,10 +3677,26 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/items/interfaces/item.interface.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/items/items.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/items/interfaces/item.interface.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/items/items.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/express/index.d.ts",
         "../src/items/dto/create-item.dto.ts",
+        "../src/items/items.service.ts",
+        "../src/items/interfaces/item.interface.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -3663,6 +3707,7 @@
         "../src/app.controller.ts",
         "../src/app.service.ts",
         "../src/items/items.controller.ts",
+        "../src/items/items.service.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -3992,6 +4037,21 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/config/keys.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/items/items.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/items/items.controller.ts",
+        "../src/items/items.service.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../node_modules/@types/anymatch/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -4039,6 +4099,13 @@
         "../node_modules/@types/babel__template/index.d.ts",
         "../node_modules/@babel/types/lib/index.d.ts",
         "../node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/bson/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -4149,6 +4216,28 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../node_modules/@types/json5/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/mongodb/index.d.ts": [
+        "../node_modules/@types/bson/index.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/ts3.2/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/mongoose/index.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/mongodb/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/ts3.2/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -6452,8 +6541,12 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/items/items.service.ts": [
+        "../src/items/interfaces/item.interface.ts"
+      ],
       "../src/items/items.controller.ts": [
-        "../node_modules/@types/express/index.d.ts",
+        "../src/items/items.service.ts",
+        "../src/items/interfaces/item.interface.ts",
         "../src/items/dto/create-item.dto.ts"
       ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
@@ -6824,6 +6917,13 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../node_modules/@types/bson/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../node_modules/@types/color-name/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -6929,6 +7029,28 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../node_modules/@types/json5/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/mongodb/index.d.ts": [
+        "../node_modules/@types/bson/index.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/ts3.2/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/mongoose/index.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/mongodb/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/ts3.2/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7316,6 +7438,9 @@
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
       "../src/items/dto/create-item.dto.ts",
+      "../src/items/interfaces/item.interface.ts",
+      "../src/items/items.service.ts",
+      "../src/items/items.controller.ts",
       "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
@@ -7354,6 +7479,7 @@
       "../node_modules/@nestjs/core/services/index.d.ts",
       "../node_modules/@nestjs/core/index.d.ts",
       "../src/main.ts",
+      "../src/items/items.module.ts",
       "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
@@ -7361,6 +7487,7 @@
       "../node_modules/@babel/parser/typings/babel-parser.d.ts",
       "../node_modules/@types/babel__template/index.d.ts",
       "../node_modules/@types/babel__core/index.d.ts",
+      "../node_modules/@types/bson/index.d.ts",
       "../node_modules/@types/color-name/index.d.ts",
       "../node_modules/@types/cookiejar/index.d.ts",
       "../node_modules/@types/eslint-visitor-keys/index.d.ts",
@@ -7377,6 +7504,8 @@
       "../node_modules/@types/jest/index.d.ts",
       "../node_modules/@types/json-schema/index.d.ts",
       "../node_modules/@types/json5/index.d.ts",
+      "../node_modules/@types/mongodb/index.d.ts",
+      "../node_modules/@types/mongoose/index.d.ts",
       "../node_modules/@types/source-list-map/index.d.ts",
       "../node_modules/@types/stack-utils/index.d.ts",
       "../node_modules/@types/superagent/index.d.ts",
@@ -7391,7 +7520,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/items/items.controller.ts"
+      "../src/config/keys.ts"
     ]
   },
   "version": "3.8.3"

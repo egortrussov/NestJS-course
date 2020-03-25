@@ -14,13 +14,16 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const create_item_dto_1 = require("./dto/create-item.dto");
+const items_service_1 = require("./items.service");
 let ItemsController = class ItemsController {
-    findAll(req, res) {
-        console.log(req.url);
-        return res.send('Hello!');
+    constructor(itemsService) {
+        this.itemsService = itemsService;
+    }
+    findAll() {
+        return this.itemsService.findAll();
     }
     findOne(param) {
-        return `Item ${param.id}`;
+        return this.itemsService.findOne(param.id);
     }
     create(createItemDto) {
         return `name: ${createItemDto.name}`;
@@ -34,17 +37,16 @@ let ItemsController = class ItemsController {
 };
 __decorate([
     common_1.Get(),
-    __param(0, common_1.Req()), __param(1, common_1.Res()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
-    __metadata("design:returntype", Object)
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Array)
 ], ItemsController.prototype, "findAll", null);
 __decorate([
     common_1.Get(':id'),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", String)
+    __metadata("design:returntype", Object)
 ], ItemsController.prototype, "findOne", null);
 __decorate([
     common_1.Post(),
@@ -68,7 +70,8 @@ __decorate([
     __metadata("design:returntype", String)
 ], ItemsController.prototype, "update", null);
 ItemsController = __decorate([
-    common_1.Controller('items')
+    common_1.Controller('items'),
+    __metadata("design:paramtypes", [items_service_1.ItemsService])
 ], ItemsController);
 exports.ItemsController = ItemsController;
 //# sourceMappingURL=items.controller.js.map
