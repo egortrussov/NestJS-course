@@ -19,10 +19,10 @@ let ItemsController = class ItemsController {
     constructor(itemsService) {
         this.itemsService = itemsService;
     }
-    findAll() {
+    async findAll() {
         return this.itemsService.findAll();
     }
-    findOne(param) {
+    async findOne(param) {
         return this.itemsService.findOne(param.id);
     }
     create(createItemDto) {
@@ -39,14 +39,14 @@ __decorate([
     common_1.Get(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", Array)
+    __metadata("design:returntype", Promise)
 ], ItemsController.prototype, "findAll", null);
 __decorate([
     common_1.Get(':id'),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", Object)
+    __metadata("design:returntype", Promise)
 ], ItemsController.prototype, "findOne", null);
 __decorate([
     common_1.Post(),

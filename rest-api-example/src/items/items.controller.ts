@@ -12,12 +12,12 @@ export class ItemsController {
     }
  
     @Get()
-    findAll(): Item[] {
+    async findAll(): Promise <Item[]> {
         return this.itemsService.findAll();
     }
 
     @Get(':id')
-    findOne(@Param() param): Item {
+    async findOne(@Param() param): Promise <Item> {
         return this.itemsService.findOne(param.id)
     }
 
