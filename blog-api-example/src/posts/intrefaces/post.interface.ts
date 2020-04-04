@@ -3,5 +3,5 @@ export interface post {
     title: string,
     body: string,
     author: string,
-    comments: [string]
+    comments: string[]
 }
