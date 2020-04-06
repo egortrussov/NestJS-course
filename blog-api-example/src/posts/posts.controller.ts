@@ -8,17 +8,17 @@ export class PostsController {
     constructor (private postsService: PostsService) {}
 
     @Get()
-    findAll(): post[] {
+    async findAll(): Promise <post[]> {
         return this.postsService.getAll()
     } 
 
-    @Get(':id')
-    findOne(@Param() params): post {
-        return this.postsService.getOneById(params.id);
-    }
+    // @Get(':id')
+    // findOne(@Param() params): post {
+    //     return this.postsService.getOneById(params.id);
+    // }
 
-    @Post('/createPost')
-    createPost(@Body() body: createPostDto): post[] {
-        return this.postsService.create(body);
-    }
+    // @Post('/createPost')
+    // createPost(@Body() body: createPostDto): post[] {
+    //     return this.postsService.create(body);
+    // }
 }
