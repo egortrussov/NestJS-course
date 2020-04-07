@@ -12,13 +12,13 @@ export class PostsController {
         return this.postsService.getAll()
     } 
 
-    // @Get(':id')
-    // findOne(@Param() params): post {
-    //     return this.postsService.getOneById(params.id);
-    // }
+    @Get(':id')
+    async findOne(@Param() params): Promise <post> {
+        return this.postsService.getOneById(params.id);
+    }
 
-    // @Post('/createPost')
-    // createPost(@Body() body: createPostDto): post[] {
-    //     return this.postsService.create(body);
-    // }
+    @Post('/createPost')
+    async createPost(@Body() body: createPostDto): Promise <post> {
+        return this.postsService.create(body);
+    }
 }

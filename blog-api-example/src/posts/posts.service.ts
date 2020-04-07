@@ -1,5 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { post } from './intrefaces/post.interface';
+import { createPostDto } from './dto/create-post.dto'
 import { Model } from 'mongoose'
 
 @Injectable()
@@ -13,12 +14,19 @@ export class PostsService {
         return this.postModel.find();
     }
 
-    // getOneById(id): post {
-    //     return this.posts[this.posts.findIndex((currPost: post) => currPost.id === id)]
-    // }
+    async getOneById(id: string): Promise <post> {
+        return this.postModel
+            .findOne({ _id: id })
+    }
 
-    // create(newPost: post): post[] {
-    //     this.posts.push(newPost);
-    //     return this.posts;
-    // }
+    async create(newPost: createPostDto): Promise <post> {
+        let postInt = {
+            title: newPost.title,
+            body: newPost.body,
+            author: newPost.author,
+            comments: newPost.comments
+        }
+        const createdPost = new this.postModel(postInt);
+        return createdPost.save();
+    }
 }
