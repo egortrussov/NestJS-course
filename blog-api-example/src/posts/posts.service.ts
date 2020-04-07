@@ -29,4 +29,8 @@ export class PostsService {
         const createdPost = new this.postModel(postInt);
         return createdPost.save();
     }
+
+    async addComment(postId: string, text: string): Promise <post> {
+        return this.postModel.findOneAndUpdate({ _id: postId }, { $push: { comments: text } })
+    }
 }

@@ -21,4 +21,9 @@ export class PostsController {
     async createPost(@Body() body: createPostDto): Promise <post> {
         return this.postsService.create(body);
     }
+
+    @Post('/addComment')
+    async addComment(@Body() body: { postId: string, text: string }): Promise <post> {
+        return this.postsService.addComment(body.postId, body.text)
+    }
 }
