@@ -8,7 +8,7 @@ import { InjectModel } from '@nestjs/mongoose'
 @Injectable()
 export class PostsService {
     constructor(
-        @InjectModel('POST_SCHEMA')
+        @InjectModel('post')
         private postModel: Model <post>,
         // @InjectModel('USER_SCHEMA')
         // private userModel: Model <user>,

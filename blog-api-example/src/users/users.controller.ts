@@ -13,6 +13,12 @@ export class UsersController {
         return this.usersService.addUser(body);
     }
 
+    @Post('/addPost')
+    async addPostToUser(@Body() body): Promise <user> {
+        console.log(body)
+        return this.usersService.addPostToUser(body.userId, body.postId);
+    }
+
     @Get(':id')
     async findOne(@Param() params): Promise <user> {
         return this.usersService.getUserById(params.id)

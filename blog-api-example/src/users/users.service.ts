@@ -8,7 +8,7 @@ import { UserSchema } from 'src/schemas/User.schema';
 @Injectable()
 export class UsersService {
     constructor(
-        @InjectModel('USER_MODEL')
+        @InjectModel('users')
         private userModel: Model <user>
     ) {}
 
@@ -20,5 +20,12 @@ export class UsersService {
     async addUser(newUser: createUserDto): Promise <user> {
         let createdUser = new this.userModel(newUser);
         return createdUser.save();
+    }
+
+    async addPostToUser(userId: string, postId: string): Promise <user> {
+        return this.userModel.findOneAndUpdate({ _id: userId }, { $push: { posts: postId } })
+        // let foundUser = await this.userModel.findById(userId);
+        // console.log(foundUser)
+        // return foundUser;
     }
 }

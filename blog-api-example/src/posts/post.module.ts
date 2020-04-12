@@ -7,7 +7,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: 'POST_SCHEMA', schema: PostSchema }, { name: 'USER_SCHEMA', schema: UserSchema }])  
+    MongooseModule.forFeature([{ name: 'post', schema: PostSchema }, { name: 'USER_SCHEMA', schema: UserSchema }])  
   ],
   controllers: [PostsController],
   providers: [PostsService]
