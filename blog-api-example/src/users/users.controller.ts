@@ -9,13 +9,12 @@ export class UsersController {
 
     
     @Post('/createUser')
-    createUser(@Body() body: createUserDto): user[] {
-        console.log(body)
+    async createUser(@Body() body: createUserDto): Promise <user> {
         return this.usersService.addUser(body);
     }
 
     @Get(':id')
-    findOne(@Param() params): user {
+    async findOne(@Param() params): Promise <user> {
         return this.usersService.getUserById(params.id)
     }
 }

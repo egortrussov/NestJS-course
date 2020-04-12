@@ -1,5 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { post } from './intrefaces/post.interface';
+import { user } from '../users/interfaces/user.interface';
 import { createPostDto } from './dto/create-post.dto'
 import { Model } from 'mongoose'
 import { InjectModel } from '@nestjs/mongoose'
@@ -7,8 +8,10 @@ import { InjectModel } from '@nestjs/mongoose'
 @Injectable()
 export class PostsService {
     constructor(
-        @InjectModel('post')
+        @InjectModel('POST_SCHEMA')
         private postModel: Model <post>,
+        // @InjectModel('USER_SCHEMA')
+        // private userModel: Model <user>,
       ) {}
 
     async getAll(): Promise <post[]> {
