@@ -2,11 +2,12 @@ import { Injectable, Inject } from '@nestjs/common';
 import { post } from './intrefaces/post.interface';
 import { createPostDto } from './dto/create-post.dto'
 import { Model } from 'mongoose'
+import { InjectModel } from '@nestjs/mongoose'
 
 @Injectable()
 export class PostsService {
     constructor(
-        @Inject('POST_MODEL')
+        @InjectModel('post')
         private postModel: Model <post>,
       ) {}
 

@@ -16,7 +16,7 @@ export class PostsController {
     async findOne(@Param() params): Promise <post> {
         return this.postsService.getOneById(params.id);
     }
-
+ 
     @Post('/createPost')
     async createPost(@Body() body: createPostDto): Promise <post> {
         return this.postsService.create(body);
