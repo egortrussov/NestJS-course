@@ -15,8 +15,13 @@ export class AuthService {
     async login(creds: LoginDto): Promise <string> {
         let userToLogin = await this.userSchema.findOne({ fullName: creds.fullName });
         if (userToLogin) {
-            let token = jwt.sign({ ...creds }, 'secret');
-            return token;
+            if (userToLogin.password === creds.password) {
+                let token = jwt.sign({ ...creds }, 'secret', {
+                    expiresIn: 3600
+                });
+                return token;
+            }
+            return 'Incorrect password'
         }
         
         return 'User does not exist';
