@@ -24,8 +24,5 @@ export class UsersService {
 
     async addPostToUser(userId: string, postId: string): Promise <user> {
         return this.userModel.findOneAndUpdate({ _id: userId }, { $push: { posts: postId } })
-        // let foundUser = await this.userModel.findById(userId);
-        // console.log(foundUser)
-        // return foundUser;
     }
 }
