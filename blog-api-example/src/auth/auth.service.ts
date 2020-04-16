@@ -3,7 +3,9 @@ import { LoginDto } from './dto/Login.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { user } from './interfaces/user.interface';
+
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 
 @Injectable()
 export class AuthService {
@@ -15,7 +17,8 @@ export class AuthService {
     async login(creds: LoginDto): Promise <string> {
         let userToLogin = await this.userSchema.findOne({ fullName: creds.fullName });
         if (userToLogin) {
-            if (userToLogin.password === creds.password) {
+            let doesMatch: boolean = await bcrypt.compare(creds.password, userToLogin.password);
+            if (doesMatch) {
                 let token = jwt.sign({ ...creds }, 'secret', {
                     expiresIn: 3600
                 });
